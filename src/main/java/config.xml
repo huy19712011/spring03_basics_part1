@@ -11,12 +11,8 @@
 >
     
     <bean name="emp" class="S04_SetterInjection.Employee">
-        <property name="id">
-            <value>20</value>
-        </property>
-        <property name="name">
-            <value>John</value>
-        </property>
+        <property name="id" value="20" />
+        <property name="name" value="John" />
     </bean>
     
     
