@@ -18,15 +18,15 @@
     />
     
     <bean name="student" 
-          class="S04_SetterInjection.ref_types.Student">
+          class="S04_SetterInjection.ref_types.Student" p:scores-ref="scores" />
         
 <!--        <property name="scores">
             <ref bean="scores"/>
         </property>-->
         
-        <property name="scores" ref="scores"/>
+<!--        <property name="scores" ref="scores"/>
         
-    </bean>
+    </bean>-->
 
 
     
