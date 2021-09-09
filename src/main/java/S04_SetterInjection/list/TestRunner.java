@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package S04_SetterInjection;
+package S04_SetterInjection.list;
 
 import java.io.File;
 import java.io.IOException;
@@ -49,12 +49,14 @@ public class TestRunner {
 
 
         // works on both netbeans and eclipse
-        String path = "D:\\Projects\\Java\\javaSpring\\spring03_04_SetterInjection\\src\\main\\java\\resources\\config.xml";
+        String path = "D:\\Projects\\Java\\javaSpring\\spring03_04_SetterInjection\\src\\main\\java\\S04_SetterInjection\\list\\list-config.xml";
 
         ApplicationContext context = new FileSystemXmlApplicationContext(path);
-        Employee bean = context.getBean("emp", Employee.class);
-        System.out.println("Employee Id: " + bean.getId());
-        System.out.println("Employee Name: " + bean.getName());
+        Hospital bean = context.getBean("hospital", Hospital.class);
+
+        System.out.println("Hospital name: " + bean.getName());
+        System.out.println("Type of list: " + bean.getDepartments().getClass());
+        System.out.println("Hospital departments: " + bean.getDepartments());
 
     }
 

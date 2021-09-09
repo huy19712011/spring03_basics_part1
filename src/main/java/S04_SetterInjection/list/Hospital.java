@@ -3,24 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package S04_SetterInjection;
+package S04_SetterInjection.list;
+
+import java.util.List;
 
 /**
  *
  * @author huynq
  */
-public class Employee {
+public class Hospital {
 
-    private int id;
     private String name;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    private List<String> departments;
 
     public String getName() {
         return name;
@@ -30,6 +24,13 @@ public class Employee {
         this.name = name;
     }
 
+    public List<String> getDepartments() {
+        return departments;
+    }
 
+    public void setDepartments(List<String> departments) {
+        this.departments = departments;
+    }
 
+    
 }

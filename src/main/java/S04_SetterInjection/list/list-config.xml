@@ -10,7 +10,18 @@
     http://www.springframework.org/schema/context/spring-context.xsd"
 >
     
-    <bean name="emp" class="S04_SetterInjection.primitive.Employee" p:id="40" p:name="p Schema" />
+    <bean name="hospital" class="S04_SetterInjection.list.Hospital">
+        <property name="name">
+            <value>Global Hospital</value>
+        </property>
+        <property name="departments">
+            <list>
+                <value>Front Office</value>
+                <value>In Partien</value>
+                <value>Out Partien</value>
+            </list>
+        </property>
+    </bean>
     
     
 </beans>
