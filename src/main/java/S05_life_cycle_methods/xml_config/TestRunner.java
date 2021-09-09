@@ -12,6 +12,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
@@ -51,11 +52,15 @@ public class TestRunner {
         // works on both netbeans and eclipse
         String path = "D:\\Projects\\Java\\javaSpring\\spring03_04_SetterInjection\\src\\main\\java\\S05_life_cycle_methods\\xml_config\\xml_config.xml";
 
-        ApplicationContext context = new FileSystemXmlApplicationContext(path);
+        // change to AbstractApplicationContext
+        AbstractApplicationContext context = new FileSystemXmlApplicationContext(path);
         Patien bean
                 = context.getBean("patien", Patien.class);
 
         System.out.println(bean);
+
+        // set to enable destroy method
+        context.registerShutdownHook();
 
     }
 
