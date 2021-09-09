@@ -20,9 +20,11 @@
     <bean name="student" 
           class="S04_SetterInjection.ref_types.Student">
         
-        <property name="scores">
+<!--        <property name="scores">
             <ref bean="scores"/>
-        </property>
+        </property>-->
+        
+        <property name="scores" ref="scores"/>
         
     </bean>
 
