@@ -10,14 +10,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd"
 >
     
-    <bean name="emp" class="S04_SetterInjection.Employee">
-        <property name="id">
-            <value>20</value>
-        </property>
-        <property name="name">
-            <value>John</value>
-        </property>
-    </bean>
+    <bean name="emp" class="S04_SetterInjection.Employee" p:id="40" p:name="p Schema" />
     
     
 </beans>
