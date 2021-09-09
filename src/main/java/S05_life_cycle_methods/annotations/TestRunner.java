@@ -36,31 +36,37 @@ public class TestRunner {
 //            // Get the absolute path of file f
 //            System.out.println(f.getAbsolutePath());
 
-
-        // this works only on eclipse, not on netbeans???
-
-//        ClassPathXmlApplicationContext ctx
-//                = new ClassPathXmlApplicationContext("config.xml");
-//
-//        Employee emp = (Employee) ctx.getBean("emp");
-//
-//        System.out.println("Employee Id: " + emp.getId());
-//        System.out.println("Employee Name: " + emp.getName());
+    System.out.println(new File(".").getAbsolutePath());
 
 
+        // put .xml file into src/main/resources folder
 
-        // works on both netbeans and eclipse
-        String path = "D:\\Projects\\Java\\javaSpring\\spring03_04_SetterInjection\\src\\main\\java\\S05_life_cycle_methods\\annotations\\annotations_config.xml";
+        ClassPathXmlApplicationContext ctx
+                = new ClassPathXmlApplicationContext("on_resources_annotations_config.xml");
 
-        // change to AbstractApplicationContext
-        AbstractApplicationContext context = new FileSystemXmlApplicationContext(path);
         Patien bean
-                = context.getBean("patien", Patien.class);
+                = ctx.getBean("patien", Patien.class);
 
         System.out.println(bean);
 
         // set to enable destroy method
-        context.registerShutdownHook();
+        ctx.registerShutdownHook();
+
+
+
+
+//        // works on both netbeans and eclipse
+//        String path = "D:\\Projects\\Java\\javaSpring\\spring03_04_SetterInjection\\src\\main\\java\\S05_life_cycle_methods\\annotations\\annotations_config.xml";
+//
+//        // change to AbstractApplicationContext
+//        AbstractApplicationContext context = new FileSystemXmlApplicationContext(path);
+//        Patien bean
+//                = context.getBean("patien", Patien.class);
+//
+//        System.out.println(bean);
+//
+//        // set to enable destroy method
+//        context.registerShutdownHook();
 
 
     }
