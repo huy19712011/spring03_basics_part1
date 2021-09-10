@@ -15,6 +15,6 @@
           p:hno="123" p:street="DCV" p:city="Hanoi"/>
     
     <bean name="employee" class="S09_autowiring.Employee" 
-          autowire="byName"/>
+          autowire="constructor"/>
     
 </beans>
