@@ -46,8 +46,11 @@ public class TestRunner {
 
         Employee bean
                 = ctx.getBean("employee", Employee.class);
+        System.out.println(bean.hashCode());
 
-        System.out.println(bean);
+        Employee bean2
+                = ctx.getBean("employee", Employee.class);
+        System.out.println(bean2.hashCode());
 
 
 

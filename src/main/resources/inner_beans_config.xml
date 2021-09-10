@@ -13,6 +13,7 @@
     <bean name="employee"
           class="S06_dependency_check.inner_beans.Employee"
           p:id="123"
+          scope="prototype"
     >
         <property name="address">
             <bean class="S06_dependency_check.inner_beans.Address"
