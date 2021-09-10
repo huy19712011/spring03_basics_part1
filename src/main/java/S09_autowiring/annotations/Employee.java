@@ -6,6 +6,7 @@
 package S09_autowiring.annotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 /**
  *
@@ -13,14 +14,9 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class Employee {
 
-    //@Autowired
+    @Autowired(required = false)
+    @Qualifier("address2")
     private Address address;
-
-    @Autowired
-    public Employee(Address address) {
-        this.address = address;
-    }
-
 
     @Override
     public String toString() {

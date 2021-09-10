@@ -12,9 +12,12 @@
 >
     
     <context:annotation-config/>
-
-    <bean name="address" class="S09_autowiring.annotations.Address"
+    
+    <bean name="address1" class="S09_autowiring.annotations.Address"
           p:hno="123" p:street="DCV" p:city="Hanoi"/>
+    
+    <bean name="address2" class="S09_autowiring.annotations.Address"
+          p:hno="123456" p:street="DCV" p:city="Hanoi"/>
     
     <bean name="employee" class="S09_autowiring.annotations.Employee"/>
     
