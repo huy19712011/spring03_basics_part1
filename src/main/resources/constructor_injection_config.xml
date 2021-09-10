@@ -14,12 +14,8 @@
           p:hno="123" p:street="DCV" p:city="Hanoi"/>
     
     <bean name="employee" class="S07_constructor_injection.Employee">
-        <constructor-arg>
-            <value>123</value>
-        </constructor-arg>
-        <constructor-arg>
-            <ref bean="address"/>
-        </constructor-arg>
+        <constructor-arg value="123"/>
+        <constructor-arg ref="address"/>
     </bean>
             
 
