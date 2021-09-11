@@ -14,18 +14,18 @@
     http://www.springframework.org/schema/util/spring-util.xsd"
 >
     
-    <bean name="dao" class="S13_interface_injection.OrderDAOImpl"/>
+<!--    <bean name="dao" class="S13_interface_injection.OrderDAOImpl"/>
 
-    <bean name="dao2" class="S13_interface_injection.OrderDAOImpl2"/>
+    <bean name="dao2" class="S13_interface_injection.OrderDAOImpl2"/>-->
 
 <!--    <bean name="bo" class="S13_interface_injection.OrderBOImpl">
         <property name="dao" ref="dao"/>
     </bean>-->
     
-    <bean name="bo" class="S13_interface_injection.OrderBOImpl">
+<!--    <bean name="bo" class="S13_interface_injection.OrderBOImpl">
         <property name="dao" ref="dao2"/>
-    </bean>
+    </bean>-->
     
-
+    <context:component-scan base-package="S13_interface_injection"/>
     
 </beans>
