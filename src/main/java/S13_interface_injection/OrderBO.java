@@ -11,4 +11,5 @@ package S13_interface_injection;
  */
 public interface OrderBO {
 
+    void placeOrder();
 }
