@@ -27,7 +27,10 @@ public class Instructor {
     @Value("#{T(java.lang.Integer).MIN_VALUE}")
     private int id = 1;
 
-    @Value("Best Instructor")
+    //@Value("Best Instructor")
+    //@Value("#{'Best Instructor'}")
+    //@Value("#{'Best Instructor'.toUpperCase()}")
+    @Value("#{new java.lang.String('new instructor')}")
     private String name = "Instructor";
 
     @Value("#{topics}")
