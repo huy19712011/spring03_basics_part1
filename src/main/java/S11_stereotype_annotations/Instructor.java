@@ -6,6 +6,7 @@
 package S11_stereotype_annotations;
 
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -28,9 +29,12 @@ public class Instructor {
     @Value("#{topics}")
     private List<String> topics;
 
+    @Autowired
+    private Profile profile;
+
     @Override
     public String toString() {
-        return "Instructor{" + "id=" + id + ", name=" + name + ", topics=" + topics + '}';
+        return "Instructor{" + "id=" + id + ", name=" + name + ", topics=" + topics + ", profile=" + profile + '}';
     }
 
 
