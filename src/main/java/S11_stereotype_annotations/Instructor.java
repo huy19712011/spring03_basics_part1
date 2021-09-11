@@ -5,6 +5,7 @@
  */
 package S11_stereotype_annotations;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -24,10 +25,14 @@ public class Instructor {
     @Value("Best Instructor")
     private String name = "Instructor";
 
+    @Value("#{topics}")
+    private List<String> topics;
+
     @Override
     public String toString() {
-        return "Instructor{" + "id=" + id + ", name=" + name + '}';
+        return "Instructor{" + "id=" + id + ", name=" + name + ", topics=" + topics + '}';
     }
+
 
     public int getId() {
         return id;
