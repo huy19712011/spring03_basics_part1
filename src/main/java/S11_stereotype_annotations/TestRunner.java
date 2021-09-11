@@ -30,11 +30,11 @@ public class TestRunner {
 
         Instructor bean
                 = ctx.getBean("instructor", Instructor.class);
-        System.out.println(bean.hashCode());
+        System.out.println(bean);
 
         Instructor bean2
                 = ctx.getBean("instructor", Instructor.class);
-        System.out.println(bean2.hashCode());
+        System.out.println(bean2);
 
 
 

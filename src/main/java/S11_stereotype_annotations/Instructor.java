@@ -5,6 +5,7 @@
  */
 package S11_stereotype_annotations;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -17,8 +18,11 @@ import org.springframework.stereotype.Component;
 @Scope("prototype")
 public class Instructor {
 
-    private int id;
-    private String name;
+    @Value("10")
+    private int id = 1;
+
+    @Value("Best Instructor")
+    private String name = "Instructor";
 
     @Override
     public String toString() {
