@@ -21,7 +21,8 @@ import org.springframework.stereotype.Component;
 public class Instructor {
 
     //@Value("10")
-    @Value("#{56+44}")
+    //@Value("#{56+44}")
+    @Value("#{T(java.lang.Math).abs(-99)}")
     private int id = 1;
 
     @Value("Best Instructor")
