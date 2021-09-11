@@ -29,7 +29,8 @@ public class TestRunner {
                 = new ClassPathXmlApplicationContext("S11_stereotype_annotations_config.xml");
 
         Instructor bean
-                = ctx.getBean("instructor", Instructor.class);
+                //= ctx.getBean("instructor", Instructor.class);
+                = ctx.getBean("customName", Instructor.class);
 
         System.out.println(bean);
 

@@ -11,7 +11,8 @@ import org.springframework.stereotype.Component;
  *
  * @author huynq
  */
-@Component
+//@Component
+@Component("customName")
 public class Instructor {
 
     private int id;
