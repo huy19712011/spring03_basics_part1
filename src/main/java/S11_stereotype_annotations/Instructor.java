@@ -20,7 +20,8 @@ import org.springframework.stereotype.Component;
 @Scope("prototype")
 public class Instructor {
 
-    @Value("10")
+    //@Value("10")
+    @Value("#{56+44}")
     private int id = 1;
 
     @Value("Best Instructor")
