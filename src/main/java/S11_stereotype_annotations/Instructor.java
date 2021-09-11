@@ -22,7 +22,9 @@ public class Instructor {
 
     //@Value("10")
     //@Value("#{56+44}")
-    @Value("#{T(java.lang.Math).abs(-99)}")
+    //@Value("#{T(java.lang.Math).abs(-99)}")
+    //@Value("#{new Integer(90)}")
+    @Value("#{T(java.lang.Integer).MIN_VALUE}")
     private int id = 1;
 
     @Value("Best Instructor")
