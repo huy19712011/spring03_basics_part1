@@ -29,10 +29,14 @@ public class TestRunner {
                 = new ClassPathXmlApplicationContext("S11_stereotype_annotations_config.xml");
 
         Instructor bean
-                //= ctx.getBean("instructor", Instructor.class);
-                = ctx.getBean("customName", Instructor.class);
+                = ctx.getBean("instructor", Instructor.class);
+        System.out.println(bean.hashCode());
 
-        System.out.println(bean);
+        Instructor bean2
+                = ctx.getBean("instructor", Instructor.class);
+        System.out.println(bean2.hashCode());
+
+
 
     }
 

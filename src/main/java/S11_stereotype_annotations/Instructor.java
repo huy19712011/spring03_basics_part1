@@ -5,6 +5,7 @@
  */
 package S11_stereotype_annotations;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,7 +13,8 @@ import org.springframework.stereotype.Component;
  * @author huynq
  */
 //@Component
-@Component("customName")
+@Component
+@Scope("prototype")
 public class Instructor {
 
     private int id;
