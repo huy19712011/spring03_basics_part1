@@ -39,9 +39,13 @@ public class Instructor {
     @Autowired
     private Profile profile;
 
+    //@Value("#{2+3>4}")
+    @Value("#{2+3>8?true:false}")
+    private boolean active;
+
     @Override
     public String toString() {
-        return "Instructor{" + "id=" + id + ", name=" + name + ", topics=" + topics + ", profile=" + profile + '}';
+        return "Instructor{" + "id=" + id + ", name=" + name + ", topics=" + topics + ", profile=" + profile + ", active=" + active + '}';
     }
 
 
