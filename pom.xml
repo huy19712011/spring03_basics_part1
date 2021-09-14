@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mycompany</groupId>
-    <artifactId>spring03_04_SetterInjection</artifactId>
+    <artifactId>spring03_basics_part1</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>spring03_04_SetterInjection</name>
+    <name>spring03_basics_part1</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
